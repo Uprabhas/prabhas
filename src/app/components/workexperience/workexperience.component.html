@@ -1,74 +1,57 @@
 <div class="flex flex-col gap-4">
-    <p class="text-xl font-bold">Work Experience</p>
-    <div class="flex items-start justify-between">
-      <div class="flex items-start gap-3 w-full">
-        <div class="avatar border-[2px] dark:border-gray-300 rounded-md">
-          <img src="/Comunus.jpg" alt="Avatar" class="avatar-image max-h-10" />
-          <!-- <div class="avatar-fallback">ComUnus</div> -->
-        </div>
-        <div
-          (click)="toggleOpen()"
-          class="flex flex-col flex-1 items-start w-full justify-between cursor-pointer group"
-        >
-          <div class="flex items-start justify-between w-full">
-            <div>
-              <div class="flex items-center gap-2">
-                <p class="inline-flex font-semibold leading-none text-xs sm:text-sm">
-                  Comunus Technologies Pvt Ltd
-                </p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="inline-block w-4 h-4 ml-1 text-gray-400 transform transition-transform duration-400"
-                  [ngClass]="{
+  <p class="text-xl font-bold">Work Experience</p>
+  <div class="flex items-start justify-between">
+    <div class="flex items-start gap-3 w-full">
+      <div class="avatar border-[2px] dark:border-gray-300 rounded-md">
+        <img src="/Comunus.jpg" alt="Avatar" class="avatar-image max-h-10" />
+        <!-- <div class="avatar-fallback">ComUnus</div> -->
+      </div>
+      <div (click)="toggleOpen()" class="flex flex-col flex-1 items-start w-full justify-between cursor-pointer group">
+        <div class="flex items-start justify-between w-full">
+          <div>
+            <div class="flex items-center gap-2">
+              <p class="inline-flex font-semibold leading-none text-xs sm:text-sm">
+                Comunus Technologies Pvt Ltd
+              </p>
+              <svg xmlns="http://www.w3.org/2000/svg"
+                class="inline-block w-4 h-4 ml-1 text-gray-400 transform transition-transform duration-400" [ngClass]="{
                     'rotate-90': isOpen,
                     'animate-bounce group-hover:text-black dark:group-hover:text-white': !isOpen
-                  }"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-              <p class="font-sans text-xs">
-                FRONTEND DEVELOPER (Angular)
-              </p>
+                  }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
             </div>
-            <div>
-              <p class="font-medium hidden md:block text-gray-500 text-sm md:text-[14px]">
-                August 2024 - Present
-              </p>
-            </div>
-          </div>
-          <div *ngIf="isOpen" class="mt-2">
-            <p class="font-normal text-gray-600 dark:text-gray-500 text-[14px]">
-              As a Frontend Develper at ComUnus, I specialize in
-              developing and optimizing our High-Tech farm platform using Angular
-              . My role involves designing and implementing dynamic,
-              responsive user interfaces to enhance the User experience
-              for our Clients.
+            <p class="font-sans text-xs">
+              FRONTEND DEVELOPER (Angular)
             </p>
-            <div class="mt-2">
-              <ul>
-                <li
-                  *ngFor="let item of responsibilities"
-                  class="flex items-start gap-2 text-gray-600 dark:text-gray-500"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-4 h-4 text-gray-600 dark:text-gray-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <circle cx="12" cy="12" r="2" />
-                  </svg>
-                  <p class="text-[14px]">{{ item }}</p>
-                </li>
-              </ul>
-            </div>
+          </div>
+          <div>
+            <p class="font-medium hidden md:block text-gray-800 text-sm md:text-[14px]">
+              August 2024 - Present
+            </p>
+          </div>
+        </div>
+        <div *ngIf="isOpen" class="mt-2">
+          <p class="font-normal text-gray-600 text-[14px]">
+            As a Frontend Developer at ComUnus, I specialize in developing and optimizing our high-tech farm platform
+            using Angular. My role involves designing and implementing dynamic, responsive user interfaces while
+            building robust functionalities and features to enhance user experience for our clients. I actively
+            contribute to solving complex project challenges, creating efficient frontend solutions, and continuously
+            improving application performance and usability.
+          </p>
+          <div class="mt-2">
+            <ul>
+              <li *ngFor="let item of responsibilities" class="flex items-start gap-2 text-gray-600 dark:text-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-600 dark:text-gray-600" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <circle cx="12" cy="12" r="2" />
+                </svg>
+                <p class="text-[14px]">{{ item }}</p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
